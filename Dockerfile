@@ -2,9 +2,7 @@
 FROM node:19-alpine
 # Create app directory
 WORKDIR /usr/src/app
-RUN apt-get update && apt-get install -y \
-    build-essential \
-    python 
+RUN apk add g++ make python
 # Install app dependencies
 COPY package*.json ./
 RUN npm install
