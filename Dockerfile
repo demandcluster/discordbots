@@ -8,5 +8,5 @@ RUN npm install
 RUN mkdir /usr/src/app/databases
 # Bundle app source
 COPY . .
-EXPOSE 8080
+EXPOSE 3001
 CMD [ "npm", "start" ]
