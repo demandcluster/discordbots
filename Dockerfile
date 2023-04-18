@@ -2,7 +2,6 @@
 FROM node:19.9.0
 # Create app directory
 WORKDIR /usr/src/app
-RUN apk add g++ make python
 # Install app dependencies
 COPY package*.json ./
 RUN npm install
