@@ -133,7 +133,9 @@ const fetchData = async (left = 0) => {
         let response;
         if (channel.type === ChannelType.DM) {
           try {
-            response = "To send me private messages, goto charluv.com !";
+            response = await message.reply(
+              "To send me private messages, goto charluv.com !"
+            );
           } catch {
             continue;
           }
@@ -274,7 +276,7 @@ client.on(Events.MessageCreate, async (message) => {
       typical: horde.typical,
       sampler_order: horde.sampler_order
     },
-    models: ["PygmalionAI/pygmalion-2.7b"]
+    models: ["llygmalion-13B-4bit-128g-cuda"]
   };
 
   if (params.inspect) {
