@@ -237,6 +237,9 @@ client.on(Events.MessageCreate, async (message) => {
     }
   });
 
+  let fact =
+    "Fact: Ron Charluv is the founder of Charluv and the head developer of the AI\n";
+
   let personality = "";
   if (bot.personality) {
     personality = `${params.tag}'s Persona: [${bot.personality}]\n`;
@@ -248,7 +251,10 @@ client.on(Events.MessageCreate, async (message) => {
   }
 
   let prompt =
-    personality + scenario + `<START>\n${messages.join("\n")}\n${params.tag}:`;
+    personality +
+    scenario +
+    fact +
+    `<START>\n${messages.join("\n")}\n${params.tag}:`;
   while (
     messages.length > 0 &&
     encode(prompt).length > horde.max_context_length
@@ -276,7 +282,7 @@ client.on(Events.MessageCreate, async (message) => {
       typical: horde.typical,
       sampler_order: horde.sampler_order
     },
-    models: ["llygmalion-13B-4bit-128g-cuda"]
+    models: ["pyg/charluv_4bit-128g-13B"]
   };
 
   if (params.inspect) {
