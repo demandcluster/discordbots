@@ -132,11 +132,9 @@ const fetchData = async (left = 0) => {
 
         let response;
         if (channel.type === ChannelType.DM) {
-          try {
-            response = await message.reply(
-              "To send me private messages, goto charluv.com !"
-            );
-          } catch {
+              try {
+            response = await channel.send(data.content);
+        } catch {
             continue;
           }
         } else {
