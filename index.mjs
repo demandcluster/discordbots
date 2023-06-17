@@ -135,7 +135,7 @@ const fetchData = async (left = 0) => {
               try {
             response = await channel.send(data.content);
         } catch {
-            continue;
+            return;
           }
         } else {
           try {
