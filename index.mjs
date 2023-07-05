@@ -280,7 +280,7 @@ client.on(Events.MessageCreate, async (message) => {
       typical: horde.typical,
       sampler_order: horde.sampler_order
     },
-    models: ["pyg/charluv_4bit-128g-13B"]
+    models: []
   };
 
   if (params.inspect) {
