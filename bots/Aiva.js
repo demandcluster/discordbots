@@ -22,11 +22,11 @@ module.exports = {
     rep_pen: 1.2,
     rep_pen_range: 1024,
     rep_pen_slope: 0.9,
-    temperature: 0.7,
+    temperature: 0.67,
     tfs: 0.9,
     top_a: 0,
-    top_k: 40,
-    top_p: 0.5,
+    top_k: 0,
+    top_p: 0.9,
     typical: 1,
     sampler_order: [6, 0, 1, 2, 3, 4, 5]
   }
