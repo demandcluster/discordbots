@@ -26,7 +26,7 @@ module.exports = {
     tfs: 0.9,
     top_a: 1,
     top_k: 0,
-    top_p: 0.5,
+    top_p: 0.9,
     typical: 1,
     sampler_order: [6, 0, 1, 2, 3, 4, 5]
   }
