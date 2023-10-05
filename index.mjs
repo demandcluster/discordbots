@@ -247,28 +247,12 @@ client.on(Events.MessageCreate, async (message) => {
   if (bot.scenario) {
     scenario = `Scenario: ${bot.scenario}\n`;
   }
-<|system|>Below is an instruction that describes a task. Write a response that appropriately completes the request.
-
-
-{{char}}'s Persona: {{personality}}
-
-This scenario of the conversation: {{scenario}}
-
-This is how {{char}} should talk: {{example_dialogue}}
-
-Then the roleplay chat between {{#each bot}}{{.name}}, {{/each}}{{char}} begins.
-
-{{#each msg}}{{#if .isbot}}<|model|>{{/if}}{{#if .isuser}}<|user|>{{/if}}{{.name}}: {{.msg}}
-{{/each}}
-{{#if ujb}}<|system|>{{ujb}}{{/if}}
-<|model|>{{post}}
   let prompt =
     '<|system|>Below is an instruction that describes a task. Write a response that appropriately completes the request.\n'+
-    'Write '+personality.name+`'s next reply in a fictional roleplay chat between `+personality.name+' and '
-
-    personality +
-    scenario +
-    fact +
+    'Write the next reply in a fictional roleplay chat between '+personality+' and '+message.author.id+
+    'The current scenario is '+ scenario +
+    'Some facts: '+fact +
+    'History: '+
     `<START>\n${messages.join("\n")}\n${params.tag}:`;
   while (
     messages.length > 0 &&
