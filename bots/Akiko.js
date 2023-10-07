@@ -19,7 +19,7 @@ module.exports = {
     api: "",
     max_context_length: 2048,
     max_length: 120,
-    rep_pen: 1.2,
+    rep_pen: 1.15,
     rep_pen_range: 1024,
     rep_pen_slope: 0.9,
     temperature: 0.67,
