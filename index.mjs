@@ -248,9 +248,8 @@ client.on(Events.MessageCreate, async (message) => {
     scenario = `Scenario: ${bot.scenario}\n`;
   }
   let prompt =
-    '<|system|>Below is an instruction that describes a task. Write a response that appropriately completes the request.\n'+
-    'Write the next reply in a fictional roleplay chat between '+personality+' and '+message.author.id+
-    'The current scenario is '+ scenario +
+    personality + 
+    scenario +
     'Some facts: '+fact +
     'History: '+
     `<START>\n${messages.join("\n")}\n${params.tag}:`;
