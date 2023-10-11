@@ -17,7 +17,7 @@ module.exports = {
   },
   horde: {
     api: "",
-    max_context_length: 2048,
+    max_context_length: 1024,
     max_length: 120,
     rep_pen: 1.15,
     rep_pen_range: 1024,
