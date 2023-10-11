@@ -19,15 +19,15 @@ module.exports = {
     api: "",
     max_context_length: 2048,
     max_length: 120,
-    rep_pen: 1.15,
+    rep_pen: 1.20,
     rep_pen_range: 1024,
     rep_pen_slope: 0.9,
-    temperature: 0.67,
-    tfs: 0.9,
+    temperature: 0.83,
+    tfs: 1.0,
     top_a: 1,
     top_k: 0,
-    top_p: 0.9,
+    top_p: 1.0,
     typical: 1,
-    sampler_order: [6, 0, 1, 2, 3, 4, 5]
+    sampler_order: [6, 0, 1, 3, 2, 4, 5]
   }
 };
