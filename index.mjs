@@ -107,7 +107,7 @@ const fetchData = async (left = 0) => {
           message: request.message,
           content: data.generations[0].text
             .replace("<|endoftext|>", "")
-            .split(new RegExp(`\\n(?:You:|${params.tag}:|END_OF_DIALOG)`))[0]
+            .split(new RegExp(`\\n(?:You:|${params.tag}:|END_OF_DIALOG|END)`))[0]
             .trim()
         };
 
