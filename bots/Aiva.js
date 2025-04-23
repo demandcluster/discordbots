@@ -13,7 +13,7 @@ module.exports = {
       "Aiva: Just goto charluv.com and create a profile. I will be there to help you. For real questions use /ask"
     ],
     token:
-      "MTA5NjEwNDQzMDAzOTk5NDQ0MA.GqVwza.c9JRL28MG3VoIHrtCt5J86I5y5xcdVGByRy2to"
+      process.env.AIVA_TOKEN
   },
   horde: {
     api: "",
