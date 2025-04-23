@@ -13,7 +13,7 @@ module.exports = {
       "Akiko: Another kill! Got my personal record!"
     ],
     token:
-      "MTA5NzgyODA5NjUxMTU3NDAxNg.GPzvRK.v8Ge6k3pT2g_zNyOIwsRVefCAZW4mcj3hComr8"
+      process.env.AKIKO_TOKEN
   },
   horde: {
     api: "",
