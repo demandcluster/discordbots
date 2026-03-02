@@ -134,7 +134,7 @@ const fetchData = async (left = 0) => {
         let response;
         if (channel.type === ChannelType.DM) {
               try {
-            response = await channel.send(data.content);
+            response = await channel.send(text);
         } catch {
             return;
           }
