@@ -377,7 +377,12 @@ client.on(Events.ClientReady, async () => {
 
   await fetchData();
 });
+client.on('error', (err) => console.error('[CLIENT ERROR]', err));
+client.on('debug', (info) => console.log('[DEBUG]', info));
 
-if (bot.token) {
-  client.login(bot.token);
+try {
+  await client.login(bot.token);
+  console.log('Login successful');
+} catch (err) {
+  console.error('Login failed:', err);
 }
