@@ -177,8 +177,9 @@ const fetchData = async (left = 0) => {
   );
 };
 
+ 
 client.on(Events.MessageCreate, async (message) => {
-  console.log(`[DEBUG] Message received from ${message.author.tag}:`, {
+ console.log(`[DEBUG] Message received from ${message.author.tag}:`, {
     content: JSON.stringify(message.content),
     contentLength: message.content?.length,
     authorId: message.author.id,
@@ -187,7 +188,6 @@ client.on(Events.MessageCreate, async (message) => {
     hasContent: !!message.content
   });
 
-client.on(Events.MessageCreate, async (message) => {
   if (
     !message.content ||
     message.author.id === client.user.id ||
